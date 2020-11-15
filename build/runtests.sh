@@ -10,8 +10,6 @@
 # =============================================================================
 #
 
-BUILD_FULLPACKAGE="false";
-
 
 ## Ausgabe
 function myecho() {
@@ -210,13 +208,6 @@ then
     echo
     exit 127
 else
-    if [ -f /home/pfroch/bin/buildfullpackage ] && [ "$BUILD_FULLPACKAGE" != "false" ]
-    then
-        # Installationsarchiv erstellen
-        echo "Erstelle installationsarchiv"
-        /home/pfroch/bin/buildfullpackage
-    fi
-
     myecho ">>>>>>>>>>>>>>>>>>>>>>> Es sind keine Fehler aufgetreten <<<<<<<<<<<<<<<<<<<<<<<"
     echo
     exit 0
