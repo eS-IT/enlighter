@@ -1,6 +1,6 @@
 {
     "name": "esit/enlighter",
-    "description": "Es handelt sich um eine Erweiterung für das Open Source CMS Contao",
+    "description": "Diese Erweiterung für das Open Source CMS Contao bindet das Script Enlighter.js ein und ermöglicht es, Quelltext übersichtlich darzustellen. Im Gegensätz zum eingebauten highlight.js, bietet Enlighter.js Zeilennummern, Zeilenhervorhebung, das Kopieren des Quelltextes, verschiedene Themes und viele mehr.",
     "license": "proprietary",
     "type": "contao-bundle",
     "authors": [
@@ -12,8 +12,11 @@
         }
     ],
     "support": {
-        "email": "info@easySolutionsIT.de"
+        "email": "info@easySolutionsIT.de",
+        "issues": "https://github.com/eS-IT/enlighter/issues",
+        "docs": "https://github.com/eS-IT/enlighter/blob/master/README.md"
     },
+    "readme": "README.md",
     "require": {
         "php": "^7.3",
         "contao/core-bundle": "^4.4",
@@ -21,8 +24,7 @@
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
-        "contao/test-case": "^4.0",
-        "phpunit/phpunit": "^9.4"
+        "contao/test-case": "^4.0"
     },
     "autoload": {
         "psr-4": {

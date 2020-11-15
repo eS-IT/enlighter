@@ -11,9 +11,11 @@
  */
 namespace Esit\Enlighter\Classes\Contao\Manager;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Esit\Enlighter\EsitEnlighterBundle;
 
 /**
  * Class Plugin
@@ -29,9 +31,6 @@ class Plugin implements BundlePluginInterface
      */
     public function getBundles(ParserInterface $parser)
     {
-        return [
-            BundleConfig::create(\Esit\Enlighter\EsitEnlighterBundle::class)
-                ->setLoadAfter([\Contao\CoreBundle\ContaoCoreBundle::class])
-        ];
+        return [BundleConfig::create(EsitEnlighterBundle::class)->setLoadAfter([ContaoCoreBundle::class])];
     }
 }
