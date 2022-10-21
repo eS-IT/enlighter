@@ -165,20 +165,7 @@ fi
 echo
 
 ## PHPUnit
-if [ -f ${toolFolder}/phpunit ]
-then
-    # PHPUnit als Phar in build installiert
-    myecho "Führe UnitTests mit lokalem PHPUnit durch"
-    ${toolFolder}/phpunit --configuration ${configFolder}/phpunit/phpunit.xml.dist --testdox
-    tmperr=$?
-
-    if [ ${tmperr} -ne 0 ]
-    then
-        error=${tmperr}
-        myerror "Es ist ein Fehler ausgetreten [${tmperr}]"
-    fi
-else
-    if [ -f ../../../vendor/bin/phpunit ]
+if [ -f ../../../vendor/bin/phpunit ] && [ -d ./Tests ]
     then
         # PHPUnit gobal mit composer installiert
         myecho "Führe UnitTests mit globalem PHPUnit durch"
@@ -193,7 +180,6 @@ else
     else
         myinfo "Ausführen der UnitTests ausgelassen. PHPUnit nicht vorhanden!"
     fi
-fi
 
 
 ## Zusammenfassung
