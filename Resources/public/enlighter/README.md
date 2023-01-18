@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/EnlighterJS/EnlighterJS.svg?branch=master)](https://travis-ci.org/EnlighterJS/EnlighterJS)
 
-[Quickstart](#quickstart) | [Documentation](https://github.com/EnlighterJS/docs) | [Languages](#languages) | [Themes](themes) | [Website](https://enlighterjs.org) 
+[Quickstart](#quickstart) | [Documentation](https://github.com/EnlighterJS/docs) | [Languages](#languages) | [Themes](#themes) | [Website](https://enlighterjs.org) 
 
 EnlighterJS3
 ====================================================================
@@ -16,7 +16,7 @@ Related
 
 * [Documentation](https://github.com/EnlighterJS/docs)
 * [Website](https://enlighterjs.org)
-* [Developer Guide](https://github.com/EnlighterJS/docs/blob/master/DeveloperGuide.md)
+* [Developer Guide](https://github.com/EnlighterJS/documentation/blob/master/development/README.md)
 * [Examples](examples/)
 * [EnlighterJS for WordPress](https://wordpress.org/plugins/enlighter/) - The official EnlighterJS plugin for WordPress | [Repository](https://github.com/EnlighterJS/Plugin.WordPress)
 * [EnlighterJS for TinyMCE Editor](https://tinymce.enlighterjs.org) - The official EnlighterJS plugin for TinyMCE Visual Editor | [Repository](https://github.com/EnlighterJS/Plugin.TinyMCE)
@@ -50,8 +50,11 @@ Features
 
 #### Languages ####
 
+* **ABAP** (abap)
+* **Apache HTTPD** (apache)
 * **Assembly** (assembly, asm)
 * **AVR Assembly** (avrassembly, avrasm)
+* **Windows Batch/Bat** (bat,batch,cmd)
 * **C/C++** (c,cpp, c++)
 * **C#** (csharp)
 * **CSS** (css)
@@ -67,30 +70,41 @@ Features
 * **Java** (java)
 * **Javascript** (js, javascript, jquery, mootools, ext.js)
 * **JSON** (json)
+* **JSX** (jsx)
 * **Kotlin** (kotlin)
+* **LATEX** (latex)
 * **LESS** (less)
+* **lighttpd** (lighttpd)
 * **LUA** (lua)
+* **MariaDB** (mariadb)
 * **Markdown** (gfm, md, markdown)
 * **Matlab/Octave** (octave, matlab)
+* **MSSQL** (mssql)
+* **NGINX** (nginx)
 * **NSIS** (nsis)
+* **Oracle Database** (oracledb)
 * **PHP** (php)
 * **Powerhsell** (powershell)
 * **Prolog** (prolog)
 * **Python** (py, python)
 * **PureBasic** (purebasic, pb)
+* **QML** (qml)
+* **R** (r)
 * **RAW** (raw) - raw code without highlighting with EnlighterJS container styles!
+* **RouterOS/SwitchOS** (routeros)
 * **Ruby** (ruby)
 * **Rust** (rust)
+* **Scala** (scala)
 * **SCSS** (scss, sass)
 * **Shellscript** (shell, bash)
-* **SQL** (sql)
+* **Generic SQL** (sql)
 * **Squirrel** (squirrel)
 * **Swift** (swift)
 * **Typescript** (typescript)
 * **VHDL** (vhdl)
 * **VisualBasic** (visualbasic, vb)
 * **Verilog** (verilog)
-* **XML** (xml)
+* **XML** (xml, html)
 * **YAML** (yaml)
 
 #### Themes ####

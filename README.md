@@ -17,8 +17,8 @@ __e@sy Solutions IT:__ Patrick Froch <info@easySolutionsIT.de>
 
 ## Voraussetzungen
 
-- php: >=7.3
-- contao/core-bundle: >=4.4
+- php: >=8.0
+- contao/core-bundle: >=4.9
 
 
 ## Installation
@@ -33,7 +33,7 @@ Einfach im Contao Manager nach `esit/enlighter` suchen und installieren.
  Damit das Syntaxhighlightning funktioniert muss unter Themes > Module ein Modul vom Typ "__Enlighter.js__" angelegt
  werden. Hier können die Einstellungen für das Syntaxhighlightning festgelegt werden.
 
- Im einzelnen sind dies:
+ Im Einzelnen sind dies:
 
  - Theme
  - Einrückung
@@ -47,7 +47,7 @@ Nun muss das Modul im gewünschten Seitenlayout eingebunden werden. Da das Modul
 egal, wo ein eingebunden wird. Es werden ausschließlich Skripte eingebunden, die an den entsprechenden Stellen
 (CSS im Head und JS im Footer) eingebunden werden.
 
-__Im entsprechenden Seitenlaylout darf das mitgelieferte `hieghlight.js` nicht aktiviert sein!__
+__Im entsprechenden Seitenlaylout darf das mitgelieferte `highlight.js` nicht aktiviert sein!__
 
 Das Highlightning wird global für alle Code-Tags auf der entsprechenden Seite eingestellt. Will man es nur auf bestimmten
 Seiten, muss man mit mehreren Seitenlayouts arbeiten. Will man einzelne Blöcke nicht auszeichnen, reicht es keine Sprache
