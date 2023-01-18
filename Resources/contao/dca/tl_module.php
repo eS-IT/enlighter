@@ -19,7 +19,7 @@ $GLOBALS['TL_DCA'][$table]['palettes']['enlighter'] = '{title_legend},name,type;
 
 /* Fields */
 $GLOBALS['TL_DCA'][$table]['fields']['enlightertheme'] = [
-    'label'                 => &$GLOBALS['TL_LANG'][$table]['enlightertheme'],
+    'label'                 => !empty($GLOBALS['TL_LANG'][$table]['enlightertheme']) ? $GLOBALS['TL_LANG'][$table]['enlightertheme'] : '',
     'exclude'               => true,
     'inputType'             => 'select',
     'default'               => 'enlighter',
@@ -30,7 +30,7 @@ $GLOBALS['TL_DCA'][$table]['fields']['enlightertheme'] = [
 ];
 
 $GLOBALS['TL_DCA'][$table]['fields']['enlighterindent'] = [
-    'label'                 => &$GLOBALS['TL_LANG'][$table]['enlighterindent'],
+    'label'                 => !empty($GLOBALS['TL_LANG'][$table]['enlighterindent']) ? $GLOBALS['TL_LANG'][$table]['enlighterindent'] : '',
     'exclude'               => true,
     'inputType'             => 'text',
     'default'               => '4',
@@ -39,7 +39,7 @@ $GLOBALS['TL_DCA'][$table]['fields']['enlighterindent'] = [
 ];
 
 $GLOBALS['TL_DCA'][$table]['fields']['enlightertextoverflow'] = [
-    'label'                 => &$GLOBALS['TL_LANG'][$table]['enlightertextoverflow'],
+    'label'                 => !empty($GLOBALS['TL_LANG'][$table]['enlightertextoverflow']) ? $GLOBALS['TL_LANG'][$table]['enlightertextoverflow'] : '',
     'exclude'               => true,
     'inputType'             => 'select',
     'default'               => 'scroll',
@@ -50,7 +50,7 @@ $GLOBALS['TL_DCA'][$table]['fields']['enlightertextoverflow'] = [
 ];
 
 $GLOBALS['TL_DCA'][$table]['fields']['enlighterlinenumbers'] = [
-    'label'                 => &$GLOBALS['TL_LANG'][$table]['enlighterlinenumbers'],
+    'label'                 => !empty($GLOBALS['TL_LANG'][$table]['enlighterlinenumbers']) ? $GLOBALS['TL_LANG'][$table]['enlighterlinenumbers'] : '',
     'exclude'               => true,
     'inputType'             => 'checkbox',
     'default'               => 1,
@@ -59,7 +59,7 @@ $GLOBALS['TL_DCA'][$table]['fields']['enlighterlinenumbers'] = [
 ];
 
 $GLOBALS['TL_DCA'][$table]['fields']['enlighterlinehover'] = [
-    'label'                 => &$GLOBALS['TL_LANG'][$table]['enlighterlinehover'],
+    'label'                 => !empty($GLOBALS['TL_LANG'][$table]['enlighterlinehover']) ? $GLOBALS['TL_LANG'][$table]['enlighterlinehover'] : '',
     'exclude'               => true,
     'inputType'             => 'checkbox',
     'default'               => 1,
