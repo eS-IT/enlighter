@@ -15,10 +15,15 @@ weiter unten zu finden.
 __e@sy Solutions IT:__ Patrick Froch <info@easySolutionsIT.de>
 
 
+## Lizenz
+
+Die Software wird unter LGPL veröffentlicht. Details sind in der Datei `LICENSE` zu finden.
+
+
 ## Voraussetzungen
 
-- php: >=8.0
-- contao/core-bundle: >=4.9
+- php: ~8.0
+- contao/core-bundle: ~4.9|^5.1
 
 
 ## Installation
@@ -47,7 +52,7 @@ Nun muss das Modul im gewünschten Seitenlayout eingebunden werden. Da das Modul
 egal, wo ein eingebunden wird. Es werden ausschließlich Skripte eingebunden, die an den entsprechenden Stellen
 (CSS im Head und JS im Footer) eingebunden werden.
 
-__Im entsprechenden Seitenlaylout darf das mitgelieferte `highlight.js` nicht aktiviert sein!__
+__Im entsprechenden Seitenlaylout darf das von Contao mitgelieferte `highlight.js` nicht aktiviert sein!__
 
 Das Highlightning wird global für alle Code-Tags auf der entsprechenden Seite eingestellt. Will man es nur auf bestimmten
 Seiten, muss man mit mehreren Seitenlayouts arbeiten. Will man einzelne Blöcke nicht auszeichnen, reicht es keine Sprache
