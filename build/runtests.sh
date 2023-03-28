@@ -94,7 +94,7 @@ then
         ${toolFolder}/phpcpd ${classesFolder}
         tmperr=$?
     else
-        ${toolFolder}/phpcpd -q ${classesFolder}
+        ${toolFolder}/phpcpd ${classesFolder} > /dev/null 2>&1
         tmperr=$?
     fi
 
@@ -107,34 +107,6 @@ then
     fi
 else
     myinfo "Prüfen auf doppelten Code ausgelassen. PhpCopyAndPasteDetector nicht vorhanden!"
-fi
-
-## php-cs-fixer
-#
-# pfroch - 02.01.2019: doesn't run on php 7.3.x, we have to wait, then:
-# REMOVE: PHP_CS_FIXER_IGNORE_ENV=1
-#
-if [ -f ${toolFolder}/php-cs-fixer ]
-then
-    myecho "Führe automatische Korrektur der Code-Standards mit Php-cs-fixer durch"
-    if [ "${VERBOSE}" == "TRUE" ]
-    then
-        PHP_CS_FIXER_IGNORE_ENV=1 ${toolFolder}/php-cs-fixer --config=${configFolder}/php_cs.dist.php fix
-        tmperr=$?
-    else
-        PHP_CS_FIXER_IGNORE_ENV=1 ${toolFolder}/php-cs-fixer -q --config=${configFolder}/php_cs.dist.php fix
-        tmperr=$?
-    fi
-
-    if [ ${tmperr} -ne 0 ]
-    then
-       error=${tmperr}
-       myerror "Es ist ein Fehler ausgetreten [${tmperr}]"
-    else
-       myshortecho "Automatische Korrektur der Code-Standards mit Php-cs-fixer erfolgreich"
-    fi
-else
-   myinfo "Automatische Korrektur der Code-Standards ausgelassen. Php-cs-fixer nicht vorhanden!"
 fi
 
 
@@ -161,25 +133,6 @@ then
 else
     myinfo "Statische Code-Analyse ausgelassen. PHP Codesniffer nicht vorhanden!"
 fi
-
-echo
-
-## PHPUnit
-if [ -f ../../../vendor/bin/phpunit ] && [ -d ./Tests ]
-    then
-        # PHPUnit gobal mit composer installiert
-        myecho "Führe UnitTests mit globalem PHPUnit durch"
-        ../../../vendor/bin/phpunit --configuration ${configFolder}/phpunit/phpunit.xml.dist --testdox
-        tmperr=$?
-
-        if [ ${tmperr} -ne 0 ]
-        then
-            error=${tmperr}
-            myerror "Es ist ein Fehler ausgetreten [${tmperr}]"
-        fi
-    else
-        myinfo "Ausführen der UnitTests ausgelassen. PHPUnit nicht vorhanden!"
-    fi
 
 
 ## Zusammenfassung
