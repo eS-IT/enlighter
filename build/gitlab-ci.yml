@@ -1,6 +1,7 @@
 stages:
     - test_cto4.9
     - test_cto4.13
+    - test_cto5.1
 
 
 test_cto4.9_php8.0:
